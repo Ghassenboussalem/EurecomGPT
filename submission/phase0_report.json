@@ -1,0 +1,24 @@
+{
+  "phase": "0",
+  "environment": {
+    "cloud_shell": true
+  },
+  "python": {
+    "version": "3.12.3",
+    "ok": true
+  },
+  "gcloud": {
+    "account": "mohamed-ghassen.bousalem@eurecom.fr",
+    "project": "project-50f5d660-b126-43b5-90d",
+    "error": null
+  },
+  "docker": {
+    "version": "Docker version 29.8.2, build 7fc2dff",
+    "present": true
+  },
+  "git": {
+    "remote": "https://github.com/Ghassenboussalem/EurecomGPT.git",
+    "is_github": true,
+    "slug": "Ghassenboussalem/EurecomGPT"
+  }
+}
