@@ -1,0 +1,49 @@
+# Student-side autograding CI for Phase 3.
+#
+# Grades the MapReduce code offline (pure Python, with an in-memory Cloud Storage fake for
+# the cloud-job path) and validates your outputs by downloading the public wordcount.json
+# and TF-IDF Parquet from the GCS URLs recorded in phase3_report.json. No Spark, no Java,
+# no GCP credentials — the cloud job ran from Cloud Shell, Spark ran in Colab; here we check
+# code + artifacts.
+#
+# Keep wordcount.json and tfidf.parquet public until you're graded, or these checks go red.
+name: autograde-phase-3
+
+on:
+  push:
+    branches: ["**"]
+  workflow_dispatch: {}
+
+# Cancel a superseded run when you push again — the latest push is what gets graded.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  autograde:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out submission
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt -r phase-3-mapreduce-spark/requirements.txt
+
+      - name: Run autograder tests (offline MapReduce + public outputs + report)
+        run: >
+          python -m pytest phase-3-mapreduce-spark/tests
+          -p autograder.points
+          --results-json results.json
+          -q
+
+      - name: Upload score artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase-3-score
+          path: results.json
