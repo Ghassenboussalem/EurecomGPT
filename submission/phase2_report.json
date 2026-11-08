@@ -1,0 +1,30 @@
+{
+  "phase": "2",
+  "environment": {
+    "colab": true
+  },
+  "attention": {
+    "naive_ms": 384.349,
+    "vectorized_ms": 1.106,
+    "speedup": 347.51
+  },
+  "threads": {
+    "1": 2518.842,
+    "2": 2550.128,
+    "4": 2168.41,
+    "8": 2300.994
+  },
+  "devices": {
+    "cpu_ms": 434740.2,
+    "gpu_ms": 14039.8
+  },
+  "training": {
+    "steps": 2000,
+    "final_loss": 1.4862,
+    "param_count": 4935680
+  },
+  "sample": "\nRomeo all his metiment and pensioned\nTo was fine the can to cousive subalt of thee\nWhich I present devils to fear uppotedater' that,\nNothing let the doubt you handsel\t tidest do would,\nThis stinded wi",
+  "model": {
+    "gcs_url": "https://storage.googleapis.com/project-50f5d660-b126-43b5-90d-eurecomgpt/model.safetensors"
+  }
+}
