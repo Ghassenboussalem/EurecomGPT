@@ -1,0 +1,155 @@
+{
+  "execution": "projects/695205065138/locations/us-central1/workflows/mr-wordcount/executions/1353e57c-5158-4ec0-9914-cefacd79b7a4",
+  "state": "SUCCEEDED",
+  "job": "mr-20261122-201123",
+  "num_splits": 12,
+  "num_reducers": 4,
+  "chaos": 0.3,
+  "map_tasks": [
+    {
+      "docs": 5,
+      "pairs": 670,
+      "split": 7,
+      "task": "map"
+    },
+    {
+      "docs": 5,
+      "pairs": 634,
+      "split": 4,
+      "task": "map"
+    },
+    {
+      "docs": 5,
+      "pairs": 667,
+      "split": 0,
+      "task": "map"
+    },
+    {
+      "docs": 5,
+      "pairs": 581,
+      "split": 3,
+      "task": "map"
+    },
+    {
+      "docs": 5,
+      "pairs": 720,
+      "split": 9,
+      "task": "map"
+    },
+    {
+      "docs": 5,
+      "pairs": 686,
+      "split": 1,
+      "task": "map"
+    },
+    {
+      "docs": 5,
+      "pairs": 616,
+      "split": 10,
+      "task": "map"
+    },
+    {
+      "docs": 5,
+      "pairs": 610,
+      "split": 11,
+      "task": "map"
+    },
+    {
+      "docs": 5,
+      "pairs": 591,
+      "split": 8,
+      "task": "map"
+    },
+    {
+      "docs": 5,
+      "pairs": 590,
+      "split": 6,
+      "task": "map"
+    },
+    {
+      "docs": 5,
+      "pairs": 714,
+      "split": 5,
+      "task": "map"
+    },
+    {
+      "docs": 5,
+      "pairs": 651,
+      "split": 2,
+      "task": "map"
+    }
+  ],
+  "reduce_tasks": [
+    {
+      "keys_out": 579,
+      "pairs_in": 2107,
+      "partition": 0,
+      "task": "reduce"
+    },
+    {
+      "keys_out": 585,
+      "pairs_in": 1662,
+      "partition": 3,
+      "task": "reduce"
+    },
+    {
+      "keys_out": 529,
+      "pairs_in": 1943,
+      "partition": 1,
+      "task": "reduce"
+    },
+    {
+      "keys_out": 528,
+      "pairs_in": 2018,
+      "partition": 2,
+      "task": "reduce"
+    }
+  ],
+  "cloud_elapsed_s": 91.6,
+  "local_elapsed_s": 0.01,
+  "vocab_size": 2221,
+  "top_terms": [
+    [
+      "your",
+      126
+    ],
+    [
+      "have",
+      102
+    ],
+    [
+      "him",
+      95
+    ],
+    [
+      "my",
+      95
+    ],
+    [
+      "marcius",
+      89
+    ],
+    [
+      "his",
+      86
+    ],
+    [
+      "our",
+      74
+    ],
+    [
+      "menenius",
+      67
+    ],
+    [
+      "all",
+      66
+    ],
+    [
+      "their",
+      66
+    ]
+  ],
+  "wordcount_gcs_url": "https://storage.googleapis.com/project-50f5d660-b126-43b5-90d-eurecomgpt/wordcount.json",
+  "matches_local": true
+}
